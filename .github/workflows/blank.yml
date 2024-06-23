@@ -24,10 +24,10 @@ jobs:
     steps:
       - id: step1
         run: |
-        {
-          echo "test=hello" >> "$GITHUB_OUTPUT"
-          echo "test_step1=hello_step1" >> "$GITHUB_ENV"
-        }
+          {
+            echo "test=hello" >> "$GITHUB_OUTPUT"
+            echo "test_step1=hello_step1" >> "$GITHUB_ENV"
+          }
       - id: step2
         run: echo "test=world" >> "$GITHUB_OUTPUT"
 
