@@ -23,7 +23,8 @@ jobs:
       output2: ${{ steps.step2.outputs.test }}
     steps:
       - id: step1
-        run: | {
+        run: |
+        {
           echo "test=hello" >> "$GITHUB_OUTPUT"
           echo "test_step1=hello_step1" >> "$GITHUB_ENV"
         }
