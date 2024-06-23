@@ -7,8 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set environment variable
-        run: echo "MY_ENV_VAR=myValue" >> $GITHUB_ENV
+        run: |
+          echo "MY_ENV_VAR=myValue" >> $GITHUB_ENV
+          echo "FLAG=1" >> $GITHUB_ENV
 
       - name: Use environment variable
         run: |
           echo "The value of MY_ENV_VAR is $MY_ENV_VAR"
+
+      - name: Doing sth
+        if: env.FLAG == 1
+        run: echo "I need do something"
